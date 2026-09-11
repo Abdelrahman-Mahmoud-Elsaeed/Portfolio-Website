@@ -43,7 +43,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-gray-400">
-              © 2025 Abdelrahman Mahmoud. Crafted with{" "}
+              © 2026 Abdelrahman Mahmoud. Crafted with{" "}
               <span className="text-cyan-400">passion</span> and{" "}
               <span className="text-purple-400">code</span>.
             </p>

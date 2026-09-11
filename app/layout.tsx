@@ -16,29 +16,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://abdelrahman-mahmoud.netlify.app"),
-  title: "Abdelrahman Mahmoud | Full-Stack Developer (Angular & ASP.NET Core)",
+  metadataBase: new URL("https://abdelrahmanmahmoud.vercel.app"),
+  title: "Abdelrahman Mahmoud | Full Stack Developer",
   description:
-    "Portfolio of Abdelrahman Mahmoud — a Full-Stack Developer specializing in Angular, ASP.NET Core, C#, SQL Server, and modern web technologies. Explore projects, backend APIs, and UI designs.",
+    "Portfolio of Abdelrahman Mahmoud, a Full Stack Developer building scalable web applications, RESTful APIs, and cloud-ready products.",
   authors: [{ name: "Abdelrahman Mahmoud" }],
   keywords: [
     "Abdelrahman Mahmoud",
     "Full Stack Developer",
     "Web Developer",
+    "Node.js",
+    "Express",
+    "React",
     "Angular",
     "ASP.NET Core",
     "C#",
-    "SQL Server",
-    "Entity Framework",
-    "Node.js",
-    "Express",
     "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "Docker",
+    "Terraform",
+    "AWS",
     "TypeScript",
     "JavaScript",
     "Tailwind CSS",
-    "SASS",
     "Next.js",
-    "Developer Egypt",
+    "Full Stack Developer Egypt",
   ],
   icons: {
     icon: [
@@ -60,14 +63,14 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Abdelrahman Mahmoud | Full-Stack Developer (Angular & ASP.NET Core)",
+    title: "Abdelrahman Mahmoud | Full Stack Developer",
     description:
-      "Discover the portfolio of Abdelrahman Mahmoud — a Full-Stack Developer skilled in Angular, ASP.NET Core, C#, and SQL Server with experience in scalable APIs and modern UI development.",
-    url: "https://abdelrahman-mahmoud.netlify.app",
+      "Discover the portfolio of Abdelrahman Mahmoud, a Full Stack Developer specializing in scalable applications, RESTful APIs, and modern web technologies.",
+    url: "https://abdelrahmanmahmoud.vercel.app/",
     siteName: "Abdelrahman Mahmoud Portfolio",
     images: [
       {
-        url: "/me.jpg",
+        url: "/me.png",
         width: 1200,
         height: 630,
         alt: "Abdelrahman Mahmoud Portrait",
@@ -77,10 +80,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdelrahman Mahmoud | Full-Stack Developer (Angular & ASP.NET Core)",
+    title: "Abdelrahman Mahmoud | Full Stack Developer",
     description:
-      "Explore the portfolio of Abdelrahman Mahmoud — a creative full-stack developer with expertise in Angular, ASP.NET Core, C#, and SQL Server.",
-    images: ["/me.jpg"],
+      "Explore the portfolio of Abdelrahman Mahmoud, a Full Stack Developer building scalable products, APIs, and cloud infrastructure.",
+    images: ["/me.png"],
     creator: "@abdoakl18",
   },
   other: {
@@ -107,10 +110,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Abdelrahman Mahmoud",
-              jobTitle: "Full-Stack Developer",
-              description: "Full-Stack Developer specializing in Angular, ASP.NET Core, C#, and SQL Server",
-              url: "https://abdelrahman-mahmoud.netlify.app",
-              image: "https://abdelrahman-mahmoud.netlify.app/me.jpg",
+              jobTitle: "Full Stack Developer",
+              description: "Full Stack Developer specializing in scalable applications, RESTful APIs, and cloud-ready products.",
+              url: "https://abdelrahmanmahmoud.vercel.app/",
+              image: "https://abdelrahmanmahmoud.vercel.app/me.png",
               sameAs: [
                 "https://www.linkedin.com/in/abdelrahman-mahmoud-akl/", 
                 "https://github.com/Abdelrahman-Mahmoud-Elsaeed",
@@ -121,14 +124,18 @@ export default function RootLayout({
                 name: "Mansoura University" 
               },
               knowsAbout: [
+                "Node.js",
+                "Express",
+                "React",
                 "Angular",
                 "ASP.NET Core",
                 "C#",
-                "SQL Server",
-                "Entity Framework",
-                "Node.js",
-                "Express",
                 "PostgreSQL",
+                "MongoDB",
+                "Redis",
+                "Docker",
+                "Terraform",
+                "AWS",
                 "TypeScript",
                 "JavaScript",
                 "Next.js"

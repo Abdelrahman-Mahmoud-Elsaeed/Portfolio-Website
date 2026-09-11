@@ -55,7 +55,7 @@ export function Contact() {
         >
           <h2 className="text-center mb-4 text-white">
             Get In{' '}
-            <span className="bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-cyan-300">
               Touch
             </span>
           </h2>

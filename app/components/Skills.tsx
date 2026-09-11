@@ -1,59 +1,54 @@
 "use client";
 
 import { motion } from 'motion/react';
-import { Code2, Server, Cloud, TestTube } from 'lucide-react';
+import { Code2, Server, Database, Cloud, ShieldCheck } from 'lucide-react';
 
 export function Skills() {
-const skillCategories = [
-  {
-    title: "Frontend",
-    icon: Code2,
-    color: "from-cyan-500 to-blue-500",
-    skills: [
-      "Angular",
-      "TypeScript",
-      "JavaScript",
-      "HTML5",
-      "CSS3 / SCSS",
-      "Responsive Design",
-    ],
-  },
-  {
-    title: "Backend",
-    icon: Server,
-    color: "from-purple-500 to-pink-500",
-    skills: [
-      "ASP.NET Core",
-      "C#",
-      "Entity Framework Core",
-      "SQL Server",
-      "RESTful APIs",
-      "Authentication & Authorization",
-    ],
-  },
-  {
-    title: "DevOps & Cloud",
-    icon: Cloud,
-    color: "from-pink-500 to-rose-500",
-    skills: [
-      "CI/CD Pipelines",
-      "Docker",
-      "GitHub Actions",
-      "Netlify",
-      "AWS Deployment",
-    ],
-  },
-  {
-    title: "Testing & Quality",
-    icon: TestTube,
-    color: "from-violet-500 to-purple-500",
-    skills: [
-      "Unit Testing (Jasmine)",
-      "Integration Testing",
-      "Debugging & Optimization",
-    ],
-  },
-];
+  const skillCategories = [
+    {
+      title: "Programming Languages",
+      icon: Code2,
+      color: "from-cyan-500 to-blue-500",
+      skills: ["TypeScript", "JavaScript (ES6+)", "C++", "C#"],
+    },
+    {
+      title: "Backend & APIs",
+      icon: Server,
+      color: "from-purple-500 to-pink-500",
+      skills: ["Node.js", "Express.js", "ASP.NET Core", "RESTful APIs", "Microservices", "Modular Monoliths"],
+    },
+    {
+      title: "Frontend & UI",
+      icon: Code2,
+      color: "from-sky-500 to-cyan-500",
+      skills: ["React.js", "Angular", "Redux Toolkit", "Tailwind CSS", "Progressive Web Apps (PWA)"],
+    },
+    {
+      title: "Databases & Caching",
+      icon: Database,
+      color: "from-emerald-500 to-teal-500",
+      skills: ["PostgreSQL", "MongoDB", "Redis", "SQL Server", "Prisma ORM", "Mongoose"],
+    },
+    {
+      title: "Cloud & DevOps",
+      icon: Cloud,
+      color: "from-pink-500 to-rose-500",
+      skills: ["AWS", "Docker", "Terraform (IaC)", "GitHub Actions", "CI/CD Pipelines", "Linux"],
+    },
+    {
+      title: "Core Engineering",
+      icon: ShieldCheck,
+      color: "from-violet-500 to-purple-500",
+      skills: [
+        "Data Structures & Algorithms",
+        "Object-Oriented Programming (OOP)",
+        "Multithreading (OpenMP)",
+        "RBAC",
+        "System Design",
+        "SDLC",
+      ],
+    },
+  ];
 
 
   return (
@@ -71,7 +66,7 @@ const skillCategories = [
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto mb-12 rounded-full" />
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
@@ -97,6 +92,7 @@ const skillCategories = [
                     </span>
                   ))}
                 </div>
+
               </div>
             </motion.div>
           ))}
@@ -106,19 +102,19 @@ const skillCategories = [
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8 }}
           className="mt-12 text-center"
         >
           <div className="relative inline-block group">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-xl blur-xl" />
             <div className="relative bg-gray-900/40 backdrop-blur-md border border-cyan-500/30 rounded-xl p-8">
               <p className="text-gray-300 max-w-3xl">
-                Continuously learning and staying updated with the latest technologies 
-                and industry best practices to deliver cutting-edge solutions.
+                Continuously learning and staying updated with the latest technologies and industry best practices to deliver cutting-edge solutions.
               </p>
             </div>
           </div>
         </motion.div>
+
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { GlowingButton } from './GlowingButton';
 
 export function Hero() {
@@ -32,7 +33,7 @@ export function Hero() {
     itemScope
     itemType="https://schema.org/Person"
   >
-    <header className="max-w-6xl mx-auto text-center z-10">
+    <header className="max-w-6xl mx-auto mb-12 text-center z-10 sm:mb-16">
       <div className="space-y-6 sm:space-y-8">
 
         {/* Badge */}
@@ -49,7 +50,7 @@ export function Hero() {
           className="text-white sr-only mb-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
           itemProp="name"
         >
-          Abdelrahman Mahmoud — Full-Stack Developer
+          Abdelrahman Mahmoud — Full Stack Developer
         </h1>
         <span aria-hidden="true" className="text-white block mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
           Hello, I am{' '}
@@ -64,7 +65,7 @@ export function Hero() {
           className="text-cyan-300 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
           itemProp="jobTitle"
         >
-          Full-Stack Web Developer
+          Full Stack Developer
         </h2>
 
 
@@ -73,7 +74,7 @@ export function Hero() {
           className="text-gray-300 max-w-2xl mx-auto text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed"
           itemProp="description"
         >
-Crafting innovative and accessible digital experiences that help businesses grow. I design and build user-friendly, responsive web applications that engage visitors, improve usability, and deliver measurable results from start to finish.        </p>
+          I build scalable web applications, RESTful microservices, and cloud infrastructure with Node.js, React, Angular, TypeScript, PostgreSQL, MongoDB, Docker, and AWS.        </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 sm:mt-10">
@@ -103,6 +104,16 @@ Crafting innovative and accessible digital experiences that help businesses grow
             <svg aria-hidden="true" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.74 2.67 1.24 3.32.95.1-.75.4-1.24.73-1.53-2.55-.29-5.23-1.28-5.23-5.72 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.17 1.18.92-.26 1.9-.39 2.88-.39s1.96.13 2.88.39c2.2-1.5 3.17-1.18 3.17-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.45-2.69 5.42-5.25 5.71.41.35.78 1.03.78 2.07 0 1.5-.01 2.71-.01 3.08 0 .3.21.66.79.55C20.71 21.38 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
           </a>
 
+          <a href="https://www.upwork.com/freelancers/~014afdf02b133b0c03" target="_blank" rel="noopener noreferrer" aria-label="Upwork profile" className="text-gray-400 hover:text-cyan-400 transition-colors">
+            <Image
+              src="/upwork-svgrepo-com.svg"
+              alt=""
+              width={32}
+              height={32}
+              className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8"
+            />
+          </a>
+
           <a href="https://www.linkedin.com/in/abdelrahman-mahmoud-akl/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="text-gray-400 hover:text-cyan-400 transition-colors">
               <svg aria-hidden="true" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.1 1 2.48 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zM8.5 8h3.75v2.2h.05c.52-.98 1.8-2.02 3.7-2.02 3.96 0 4.7 2.6 4.7 5.98V24h-4v-7.5c0-1.79-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 3.98V24h-4V8z"/></svg>
           </a>
@@ -126,22 +137,24 @@ Crafting innovative and accessible digital experiences that help businesses grow
 
       {/* Scroll indicator */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-        <svg
-          aria-hidden="true"
-          className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-400"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+        <div className="animate-pulse text-cyan-400 drop-shadow-[0_0_10px_currentColor]">
+          <svg
+            aria-hidden="true"
+            className="h-8 w-8 animate-bounce sm:h-10 sm:w-10"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
       </div>
 
       {/* Structured data helpers */}
       <meta
         itemProp="knowsAbout"
-        content="Angular, TypeScript, JavaScript, HTML5, CSS3, SCSS, Responsive Web Design, ASP.NET Core, C#, Entity Framework Core, SQL Server, RESTful APIs, Authentication, Authorization, CI/CD Pipelines, Docker, GitHub Actions, AWS, Netlify, Unit Testing, Integration Testing, Debugging, Performance Optimization"
+        content="Node.js, Express, React, Angular, TypeScript, JavaScript, ASP.NET Core, C#, RESTful APIs, Microservices, PostgreSQL, MongoDB, Redis, Prisma ORM, Docker, Terraform, AWS, GitHub Actions, CI/CD, RBAC, System Design, Performance Optimization"
       />
-      <meta itemProp="url" content="https://abdelrahman-mahmoud.netlify.app/" />
+      <meta itemProp="url" content="https://abdelrahmanmahmoud.vercel.app/" />
       <link itemProp="sameAs" href="https://github.com/Abdelrahman-Mahmoud-Elsaeed" />
       <link itemProp="sameAs" href="https://www.linkedin.com/in/abdelrahman-mahmoud-akl/" />
     </header>

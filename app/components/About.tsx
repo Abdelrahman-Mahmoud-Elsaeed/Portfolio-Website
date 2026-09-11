@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Languages, Download } from 'lucide-react';
+import { Mail, Phone, MapPin, Languages, Download, Award, GraduationCap } from 'lucide-react';
+import Image from 'next/image';
 import { GlowingButton } from './GlowingButton';
 
 export function About() {
   const personalInfo = [
     { icon: Mail, label: 'Email', value: 'abdelrahman.mahmoud.elsaeed@gmail.com' },
-    { icon: Phone, label: 'Phone', value: '+20 109 516 0726' },
+    { icon: Phone, label: 'Phone', value: '(+20) 01095160726' },
     { icon: MapPin, label: 'Location', value: 'Cairo, Egypt' },
     { icon: Languages, label: 'Languages', value: 'Arabic, English' }
   ];
@@ -37,16 +38,27 @@ export function About() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
             <div className="relative h-full bg-gray-900/40 backdrop-blur-md border border-cyan-500/30 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 hover:border-cyan-400/50 transition-all">
-              <h3 className="mb-4 sm:mb-6 text-cyan-300">Professional Profile</h3>
-              <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                I&apos;m a passionate Full-Stack Developer with expertise in creating robust, 
-                scalable web applications. I combine creative problem-solving with technical 
-                excellence to deliver exceptional digital solutions.
+              <div className="mb-6 flex flex-col items-center gap-4 sm:flex-row sm:items-start">
+                <div className="relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-full border-2 border-cyan-400/60 shadow-lg shadow-cyan-500/20">
+                  <Image
+                    src="/me.png"
+                    alt="Abdelrahman Mahmoud"
+                    fill
+                    sizes="112px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <div>
+                  <h3 className="mb-2 text-cyan-300">Full Stack Developer</h3>
+                  <p className="text-sm text-gray-400">Scalable applications, APIs, and cloud-ready products</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4 leading-relaxed">
+                I architect scalable web applications, RESTful microservices, and multi-tenant platforms across the full stack. My work combines product-focused frontend development with secure backend systems and cloud infrastructure.
               </p>
               <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed">
-                With a strong foundation in both frontend and backend technologies, 
-                I bring ideas to life through clean code, modern design patterns, 
-                and cutting-edge development practices.
+                Recent work includes search optimization that improved response times by up to 40% and workflow automation that reduced manual effort by as much as 60%.
               </p>
               
               <a
@@ -69,7 +81,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="space-y-3 sm:space-y-4"
+            className="flex flex-col justify-around space-y-3 sm:space-y-4"
           >
             {personalInfo.map((info, index) => (
               <motion.div
@@ -94,6 +106,55 @@ export function About() {
                 </div>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="rounded-xl border border-cyan-500/30 bg-gray-900/40 p-5 backdrop-blur-md sm:p-6"
+          >
+            <div className="mb-4 flex items-center gap-3">
+              <GraduationCap aria-hidden="true" className="h-6 w-6 text-cyan-400" />
+              <h3 className="text-cyan-300">Education</h3>
+            </div>
+            <h4 className="text-white">Bachelor&apos;s Degree</h4>
+            <p className="mt-1 text-gray-300">Computer Teacher Preparation Department</p>
+            <p className="mt-1 text-sm text-gray-400">Faculty of Specific Education, Mansoura University · Graduated June 2023</p>
+            <p className="mt-3 text-sm text-gray-400">Grade: Very Good (81%)</p>
+            <p className="mt-1 text-sm text-gray-400">Focus: Computer Science, Software Engineering, Database Management</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="rounded-xl border border-purple-500/30 bg-gray-900/40 p-5 backdrop-blur-md sm:p-6"
+          >
+            <div className="mb-4 flex items-center gap-3">
+              <Award aria-hidden="true" className="h-6 w-6 text-purple-300" />
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-purple-200">Certifications</h3>
+                <a
+                  href="https://drive.google.com/file/d/1Zfefko2VbJInQfJVNWXPiVU2UfEYvX82/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-purple-200 underline underline-offset-4 hover:text-white"
+                >
+                  View certificates
+                </a>
+              </div>
+            </div>
+            <ul className="space-y-3 text-sm text-gray-300">
+              <li>AWS Certified Developer - Associate</li>
+              <li>AWS Certified Cloud Practitioner <span className="text-gray-500">(ID: 49a69e2bee3f4dde9b7c43c832ce9149)</span></li>
+              <li>Advanced Full-Stack Web Development, MCIT Egypt <span className="text-gray-500">(March 2023 · ID: HG4NWNRJ)</span></li>
+              <li>Meta Front-End Developer Specialization, Coursera <span className="text-gray-500">(10+ certifications · ID: FR55AET5H5QQ)</span></li>
+            </ul>
           </motion.div>
         </div>
       </div>
